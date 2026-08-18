@@ -40,7 +40,7 @@ const Hero = ({ isDark }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Hero Text Column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -59,7 +59,7 @@ const Hero = ({ isDark }) => {
 
             {/* Main Name */}
             <div>
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -82,9 +82,8 @@ const Hero = ({ isDark }) => {
             </div>
 
             {/* Professional Summary */}
-            <p className={`text-base sm:text-lg leading-relaxed max-w-2xl ${
-              isDark ? 'text-slate-300' : 'text-slate-700'
-            }`}>
+            <p className={`text-base sm:text-lg leading-relaxed max-w-2xl ${isDark ? 'text-slate-300' : 'text-slate-700'
+              }`}>
               "{personalInfo.summary}"
             </p>
 
@@ -94,7 +93,7 @@ const Hero = ({ isDark }) => {
                 <CheckCircle className="w-3.5 h-3.5 text-cyan-400" /> MCA Graduate Medi-Caps
               </span>
               <span className="px-3 py-1 text-xs rounded-lg bg-slate-900/80 border border-white/10 text-slate-300 font-mono flex items-center gap-1.5">
-                <CheckCircle className="w-3.5 h-3.5 text-purple-400" /> HCLTech Trainee
+                <CheckCircle className="w-3.5 h-3.5 text-purple-400" /> MERN Stack Developer Intern
               </span>
               <span className="px-3 py-1 text-xs rounded-lg bg-slate-900/80 border border-white/10 text-slate-300 font-mono flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-indigo-400" /> Indore / Remote
@@ -117,11 +116,10 @@ const Hero = ({ isDark }) => {
               {/* Hire Me Button */}
               <a
                 href={`mailto:${personalInfo.email}`}
-                className={`group inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-semibold border transition-all duration-300 ${
-                  isDark
+                className={`group inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-semibold border transition-all duration-300 ${isDark
                     ? 'bg-slate-900/80 border-white/15 text-white hover:bg-slate-800 hover:border-cyan-500/40'
                     : 'bg-white border-slate-300 text-slate-900 hover:bg-slate-50 shadow-sm'
-                }`}
+                  }`}
               >
                 <Mail className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" />
                 <span>Hire Me</span>
@@ -177,7 +175,7 @@ const Hero = ({ isDark }) => {
 
               {/* Main Glass Card */}
               <div className="relative rounded-3xl glass-panel p-6 shadow-2xl space-y-6 border border-white/10">
-                
+
                 {/* Tech Badge Header */}
                 <div className="flex items-center justify-between pb-4 border-b border-white/10">
                   <div className="flex items-center gap-3">

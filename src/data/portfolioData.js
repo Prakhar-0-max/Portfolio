@@ -16,10 +16,10 @@ export const personalInfo = {
   languages: ["English", "Hindi"],
   github: "https://github.com/Prakhar-0-max",
   linkedin: "https://www.linkedin.com/in/prakhar-sethiya-983650290/",
-  resume: "https://drive.google.com/file/d/1uvhh9pKGEUEhlQa2NePrMW45s4PRxtqd/view?usp=drive_link",
+  resume: "https://drive.google.com/file/d/1VLY7pc0LBAJmPhtPOWxog-FI2A8OaTJ9/view?usp=sharing",
   stats: [
     { label: "Full Stack Projects", value: "3+" },
-    { label: "Tech Training", value: "HCLTech" },
+    { label: "Experience", value: "Mactosys" },
     { label: "Education Degree", value: "MCA" },
     { label: "Availability", value: "Immediate" }
   ]

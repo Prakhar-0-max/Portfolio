@@ -6,7 +6,7 @@ import { personalInfo } from '../data/portfolioData';
 const navItems = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Training', href: '#training' },
+  { name: 'Experience', href: '#training' },
   { name: 'Education', href: '#education' },
   { name: 'Projects', href: '#projects' },
   { name: 'Certifications', href: '#certifications' },
@@ -45,13 +45,12 @@ const Navbar = ({ isDark, setIsDark }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled
           ? isDark
             ? 'glass-nav shadow-lg shadow-black/20 border-b border-white/10 py-3'
             : 'glass-nav-light shadow-md shadow-slate-200/50 border-b border-slate-200 py-3'
           : 'bg-transparent py-5'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
@@ -73,13 +72,12 @@ const Navbar = ({ isDark, setIsDark }) => {
               <a
                 key={item.name}
                 href={item.href}
-                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
-                  isActive
+                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${isActive
                     ? 'text-cyan-400 font-semibold'
                     : isDark
-                    ? 'text-slate-300 hover:text-white'
-                    : 'text-slate-600 hover:text-slate-900'
-                }`}
+                      ? 'text-slate-300 hover:text-white'
+                      : 'text-slate-600 hover:text-slate-900'
+                  }`}
               >
                 {isActive && (
                   <motion.div
@@ -100,11 +98,10 @@ const Navbar = ({ isDark, setIsDark }) => {
           <button
             onClick={() => setIsDark(!isDark)}
             aria-label="Toggle Theme"
-            className={`p-2.5 rounded-full border transition-all duration-300 ${
-              isDark
+            className={`p-2.5 rounded-full border transition-all duration-300 ${isDark
                 ? 'bg-slate-900/80 border-white/10 text-yellow-400 hover:bg-slate-800'
                 : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-100 shadow-sm'
-            }`}
+              }`}
           >
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
@@ -126,11 +123,10 @@ const Navbar = ({ isDark, setIsDark }) => {
           <button
             onClick={() => setIsDark(!isDark)}
             aria-label="Toggle Theme"
-            className={`p-2 rounded-lg border ${
-              isDark
+            className={`p-2 rounded-lg border ${isDark
                 ? 'bg-slate-900 border-white/10 text-yellow-400'
                 : 'bg-white border-slate-200 text-slate-700'
-            }`}
+              }`}
           >
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
@@ -138,11 +134,10 @@ const Navbar = ({ isDark, setIsDark }) => {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle Mobile Navigation"
-            className={`p-2.5 rounded-xl border ${
-              isDark
+            className={`p-2.5 rounded-xl border ${isDark
                 ? 'bg-slate-900/80 border-white/10 text-white'
                 : 'bg-white border-slate-200 text-slate-900'
-            }`}
+              }`}
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -156,11 +151,10 @@ const Navbar = ({ isDark, setIsDark }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className={`md:hidden border-b ${
-              isDark
+            className={`md:hidden border-b ${isDark
                 ? 'bg-slate-950/95 border-white/10 backdrop-blur-xl'
                 : 'bg-white/95 border-slate-200 backdrop-blur-xl'
-            }`}
+              }`}
           >
             <div className="px-4 pt-3 pb-6 space-y-2">
               {navItems.map((item) => (
@@ -168,13 +162,12 @@ const Navbar = ({ isDark, setIsDark }) => {
                   key={item.name}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-4 py-2.5 rounded-xl text-base font-medium transition-all ${
-                    activeSection === item.href.substring(1)
+                  className={`block px-4 py-2.5 rounded-xl text-base font-medium transition-all ${activeSection === item.href.substring(1)
                       ? 'bg-cyan-500/10 text-cyan-400 font-semibold border border-cyan-500/20'
                       : isDark
-                      ? 'text-slate-300 hover:bg-slate-900'
-                      : 'text-slate-700 hover:bg-slate-100'
-                  }`}
+                        ? 'text-slate-300 hover:bg-slate-900'
+                        : 'text-slate-700 hover:bg-slate-100'
+                    }`}
                 >
                   {item.name}
                 </a>
